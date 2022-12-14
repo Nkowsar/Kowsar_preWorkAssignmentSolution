@@ -13,12 +13,16 @@ Scanner sc = new Scanner(System.in);
            //function to checkPalindrome
 
        public void checkPalindrome()  {
-        System.out.println("Enter string to check whether it is palindrome or not");
-        String str=sc.next();
-        StringBuilder sb=new StringBuilder(str);  
-        if(sb==sb.reverse()) System.out.println("It is palindrome");
-        else System.out.println("It is not palindrome");
-
+        System.out.println("Enter string/number to check whether it is palindrome or not");
+        String original = sc.nextLine();  
+        String reverse="";
+      int length = original.length();   
+      for ( int i = length - 1; i >= 0; i-- )  
+         reverse = reverse + original.charAt(i);  
+      if (original.equals(reverse))  
+         System.out.println("Entered string/number is a palindrome.");  
+      else  
+         System.out.println("Entered string/number isn't a palindrome.");   
 
       }
 
